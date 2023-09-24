@@ -1,0 +1,19 @@
+services:
+  server:
+    build: .
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 'all'
+              capabilities: [gpu]
+    healthcheck:
+      test: ["CMD", "curl", "-f", "localhost:8000/v2/health/live"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 6s
+    ports:
+      - "8000:8000"  
+      - "8002:8002"

@@ -1,0 +1,23 @@
+schema: '2.0'
+stages:
+  convert-to-newest-opset:
+    cmd: python ./convert_models.py
+    deps:
+    - path: ./convert_models.py
+      hash: md5
+      md5: 76cc34636e56b022fa6d8e04fd95adcc
+      size: 586
+    - path: ./models/pointilism-9.onnx
+      hash: md5
+      md5: 9d183f4afb1aef1ff105dacfa28b79bd
+      size: 6728029
+    - path: ./models/udne-9.onnx
+      hash: md5
+      md5: 2a5627259cfffd2369a728b2ea30026a
+      size: 6728029
+    outs:
+    - path: ./models/converted
+      hash: md5
+      md5: 6f9c9388ca9b03338a2357e0cbbd71d9.dir
+      size: 13462948
+      nfiles: 2

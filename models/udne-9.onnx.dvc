@@ -1,0 +1,13 @@
+md5: 1ec4e034b7929e91a6387a79f93c8958
+frozen: true
+deps:
+- checksum: '"8656b6ce7dec8f22ee13c2d557d6b67bd6f550dde88d0f2e7c9972aeb765cc0d"'
+  size: 6728029
+  hash: md5
+  path: 
+    https://github.com/onnx/models/raw/main/vision/style_transfer/fast_neural_style/model/udnie-9.onnx
+outs:
+- md5: 2a5627259cfffd2369a728b2ea30026a
+  size: 6728029
+  hash: md5
+  path: udne-9.onnx

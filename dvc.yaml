@@ -1,0 +1,9 @@
+stages:
+  convert-to-newest-opset:
+    cmd: python ./convert_models.py
+    deps:
+    - ./convert_models.py
+    - ./models/pointilism-9.onnx
+    - ./models/udne-9.onnx
+    outs:
+    - ./models/converted
