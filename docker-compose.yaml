@@ -1,13 +1,14 @@
 services:
   server:
     build: .
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              count: 'all'
-              capabilities: [gpu]
+    # uncomment below for GPU support
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: 'all'
+    #           capabilities: [gpu]
     healthcheck:
       test: ["CMD", "curl", "-f", "localhost:8000/v2/health/live"]
       interval: 30s

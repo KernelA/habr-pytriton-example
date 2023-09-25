@@ -1,0 +1,2 @@
+onnxruntime-gpu~=1.16.0
+-r ./requirements.server.base.txt

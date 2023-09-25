@@ -16,7 +16,8 @@ RUN python -m venv /home/app/venv
 ENV PATH=/home/app/venv/bin:${PATH}
 
 RUN --mount=type=cache,id=pip-cache,target=/root/.cache/pip \
-    --mount=type=bind,source=./requirements.server.txt,target=./requirements.txt \
+    --mount=type=bind,source=./requirements.server.cpu.txt,target=./requirements.txt \
+    --mount=type=bind,source=./requirements.server.base.txt,target=./requirements.server.base.txt \
     pip install -r ./requirements.txt
 
 COPY ./server.py ./
