@@ -40,7 +40,8 @@ if __name__ == "__main__":
             out_img = gr.Image(image_mode="RGB", height=300)
 
         with gr.Row():
-            in_model_names = gr.Radio(model_names, value=model_names[0])
+            in_model_names = gr.Radio(
+                model_names, value=model_names[0], label="Style")
             btn = gr.Button()
             btn.click(process_image, inputs=[
                       in_img, in_model_names], outputs=out_img)
